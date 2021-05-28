@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste TechOps | Banners - Mateus Brito</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                font-family: 'Merriweather', serif;
+                font-weight: 900;
+            }
+
+            html, body, main{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            main{
+                -ms-display: flex;
+                display: flex;
+                flex-direction: column;
+                -ms-flex-direction: column;
+                align-items: center;
+                -ms-align-items: center;
+                justify-content: center;
+                -ms-justify-content: center;
+            }
+
+            main .wrapper{
+                width: 970px;
+                height: 250px;
+                position: relative;
+            }
+
+            main .wrapper .text{
+                position: absolute;
+                z-index: 1000;
+                color: #FFFFFF;
+            }
+
+            main .wrapper .text:nth-of-type(1){
+                width: 350px;
+                top: 20%;
+                left: 2%;
+                font-size: 22px;
+                line-height: 48px;
+                animation-name: fadein1;
+                animation-duration: 5s;
+            }
+
+            main .wrapper .text:nth-of-type(1) span{
+                font-size: 44px;
+            }
+
+            main .wrapper .text:nth-of-type(2){
+                width: 150px;
+                bottom: 6%;
+                left: 2%;
+                font-size: 9px;
+                animation-name: fadein3;
+                animation-duration: 5s;
+            }
+
+            main .wrapper .text:nth-of-type(3){
+                width: 260px;
+                bottom: 40%;
+                right: 2%;
+                font-size: 22px;
+                animation-name: fadein2;
+                animation-duration: 5s;
+            }
+
+            main .wrapper .text:nth-of-type(3) span{
+                font-size: 31px;
+            }
+
+            main .wrapper .image{
+                position: absolute;
+                top: 0;
+            }
+
+            main .wrapper .image:nth-of-type(3){
+                animation-name: fadein4;
+                animation-duration: 5s;
+            }
+
+            main .wrapper .image:not(:nth-of-type(1)):not(:nth-of-type(3)){
+                animation-name: fadein;
+                animation-duration: 5s;
+            }
+
+            @keyframes fadein {
+                0%{
+                    opacity: 0%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }
+
+            @keyframes fadein1 {
+                0%{
+                    opacity: 0%;
+                }
+                50%{
+                    opacity: 100%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }
+
+            @keyframes fadein2 {
+                0%{
+                    opacity: 0%;
+                }
+                30%{
+                    opacity: 0%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }
+
+            @keyframes fadein3 {
+                0%{
+                    opacity: 0%;
+                }
+                55%{
+                    opacity: 0%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }
+
+            @keyframes fadein4 {
+                0%{
+                    opacity: 0%;
+                }
+                70%{
+                    opacity: 0%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+           <div class="wrapper">
+               <p class="text">Nosso novo ingrediente: <span>Energia verde.</span></p>
+               <p class="text">Produção utilizando energia 100% verde nas fábricas de Alagoinhas(BA), Araraquara(SP) e Ponta Grossa(PR). Cada dia mais verde. Saiba mais no site:www.heineken.com/br</p>
+               <p class="text">Produzida com energia <span>100% renovável</span></p>
+               <img class="image" src="./assets/ex1/fundo.jpg" alt="Imagem do Banner" title="Imagem do Banner">
+               <img class="image" src="./assets/ex1/energia-verde.png" alt="Imagem do Banner" title="Imagem do Banner">
+               <img class="image" src="./assets/ex1/aprecie-com-moderacao.png" alt="Imagem do Banner" title="Imagem do Banner">
+               <img class="image" src="./assets/ex1/heineken.png" alt="Imagem do Banner" title="Imagem do Banner">
+           </div> 
+        </main>
+        <script>
+
+        </script>
+    </body>
+</html>
