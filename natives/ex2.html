@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste TechOps | Natives - Mateus Brito</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            font-weight: 900;
+        }
+
+        html, body, main{
+            width: 100%;
+            height: auto;
+        }
+
+        main{
+            -ms-display: flex;
+            display: flex;
+            flex-direction: column;
+            -ms-flex-direction: column;
+            align-items: center;
+            -ms-align-items: center;
+            justify-content: center;
+            -ms-justify-content: center;
+        }
+
+        main #native-list{
+            width: 100%;
+            max-width: 1400px;
+            -ms-display: flex;
+            display: flex;
+            flex-direction: row;
+            -ms-flex-direction: row;
+            align-items: center;
+            -ms-align-items: center;
+            justify-content: center;
+            -ms-justify-content: center;
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            list-style: none;
+        }
+
+        main #native-list .item{
+            -ms-display: flex;
+            display: flex;
+            flex-direction: column;
+            -ms-flex-direction: column;
+            align-items: center;
+            -ms-align-items: center;
+            justify-content: center;
+            -ms-justify-content: center;
+            flex-basis: 33%;
+            -ms-flex-basis: 33%;
+            margin: 20px 0px;
+        }
+
+        main #native-list .item #native-wrapper-iframe{
+            width: 100%;
+            max-width: 428px;
+            height: 362px;
+        }
+
+        @media (max-width: 767px){
+            main #native-list .item{
+                flex-basis: 100%;
+                -ms-flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <ul id="native-list">
+            <li class="item">
+                <iframe id="native-wrapper-iframe" src="./ex1.html" frameborder="0"></iframe>
+            </li>
+            <li class="item">
+                <iframe id="native-wrapper-iframe" src="./ex1.html" frameborder="0"></iframe>
+            </li>
+            <li class="item">
+                <iframe id="native-wrapper-iframe" src="./ex1.html" frameborder="0"></iframe>
+            </li>
+            <li class="item">
+                <iframe id="native-wrapper-iframe" src="./ex1.html" frameborder="0"></iframe>
+            </li>
+            <li class="item">
+                <iframe id="native-wrapper-iframe" src="./ex1.html" frameborder="0"></iframe>
+            </li>
+            <li class="item">
+                <iframe id="native-wrapper-iframe" src="./ex1.html" frameborder="0"></iframe>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

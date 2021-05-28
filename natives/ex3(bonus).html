@@ -39,6 +39,18 @@
                 position: relative;
             }
 
+            main #native-wrapper .wrapper .overlayer{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 50%;
+            }
+
+            main #native-wrapper .wrapper .image{
+                display: block;
+            }
+
             main #native-wrapper .wrapper .chapeu{
                 position: absolute;
                 bottom: 15px;
@@ -46,7 +58,6 @@
                 padding: 5px;
                 border-radius: 5px;
                 font-size: 18px;
-                background-color: #48a7fc;
                 color: #FFFFFF;
             }
 
@@ -61,6 +72,7 @@
         <main>
             <div id="native-wrapper">
                 <div class="wrapper">
+                    <div class="overlayer"></div>
                     <img class="image" src="https://picsum.photos/428/268" alt="Imagem de anúncio nativo" title="Anúncio Nativo">
                     <span class="chapeu"></span>
                 </div>
@@ -69,8 +81,11 @@
         </main>
         <script>
             let $chapeu = document.querySelector("main #native-wrapper .wrapper .chapeu");
+            let $overlayer = document.querySelector("main #native-wrapper .wrapper .overlayer");
             let $text = document.querySelector("main #native-wrapper .text");
+
             let textValue = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam id repellat fugit veniam perferendis vel ea rem deserunt cum. Veritatis sapiente porro blanditiis culpa architecto? Cumque atque nobis dolorum!";
+            let matchingColors = ["#48A7FC", "#3E4756", "#A1ACBD", "#F37BA5", "#B84571", "#F9F871", "#9DF78D", "#00ECBD"];
 
             $chapeu.innerHTML = "Lorem";
 
@@ -80,6 +95,13 @@
             else{
                 $text.innerHTML = textValue.substr(0,113);
             }
+
+            $chapeu.style.backgroundColor = `${matchingColors[Math.floor(Math.random() * matchingColors.length)]}`;
+            $overlayer.style.backgroundColor = `${matchingColors[Math.floor(Math.random() * matchingColors.length)]}`;
+            $text.style.color = `${matchingColors[Math.floor(Math.random() * matchingColors.length)]}`;
+            $chapeu.style.color = `${matchingColors[Math.floor(Math.random() * matchingColors.length)]}`;
+
+            console.log($text.style.backgroundColor);
         </script>
     </body>
 </html>
