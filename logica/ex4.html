@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste TechOps | Lógica - Mateus Brito</title>
+    </head>
+    <body>
+        <script>
+            function techOpsPrint(limit, steps){
+                if(steps > 0){
+                    if(steps >= limit){
+                        console.log(steps);
+                        if(steps%3 == 0){
+                            if(steps%5 == 0){
+                                document.write("TechOps");
+                                document.write("<br/>");
+                            }
+                            else{
+                                document.write("Tech");
+                                document.write("<br/>");
+                            }
+                        }
+                        else{
+                            if(steps%5 == 0){
+                                document.write("Ops");
+                                document.write("<br/>");
+                            }
+                            else{
+                                document.write(steps);
+                                document.write("<br/>");
+                            }
+                        }
+
+                        return steps;
+                    }
+                    else{
+                        console.log(steps);
+                        return steps + techOpsPrint(limit, steps);
+                    }   
+                }
+                else{
+                    alert("Valor do step inválido.");
+                }
+            }
+
+            techOpsPrint(10, 2);
+        </script>
+    </body>
+</html>
