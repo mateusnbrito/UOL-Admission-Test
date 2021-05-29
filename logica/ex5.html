@@ -30,8 +30,8 @@
                     }
                 }
             }
-    
-            function recursiveCount(limitValue, stepsValue){
+
+            function recursiveCount(limitValue, stepsValue, auxValue){
                 if(stepsValue > 0){
                     printValue(stepsValue);
     
@@ -39,18 +39,15 @@
                         return 0;
                     }
                     else{
-                        return stepsValue + recursiveCount(limitValue, stepsValue+steps);
+                        return stepsValue + recursiveCount(limitValue, stepsValue+auxValue, auxValue);
                     }
                 }
                 else{
                     alert("Valor do step inválido.");
                 }
             }
-    
-            var limit = 15;
-            var steps = 3;
-    
-            recursiveCount(limit, steps);
+
+            recursiveCount(15, 3, 3);
         </script>
     </body>
 </html>
