@@ -12,18 +12,21 @@
             let listB = []; //Lista B
 
             //Algoritmo A
-            let elements = document.querySelectorAll(".js-productClick[title]").forEach((item) => {
+            let elements = document.querySelectorAll(".js-productClick[title]").forEach(function(item){
                 if(item.getAttribute("data-product-sku")%3 == 0){
                     listA.push(item);
                 }
             });
 
             //Algoritmo B
-            window.dataLayer.forEach((item) => {
+            window.dataLayer.forEach(function(item){
                 if(item.event == "xhr response" && (item.requestBody != null && item.requestBody != undefined)){
                     listB.push(item);
                 }
             });
+
+            console.log(listA);
+            console.log(listB);
         </script>
     </body>
 </html>
