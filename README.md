@@ -1,4 +1,4 @@
-# Teste feito como parte do processo seletivo da UOL
+# Teste do processo seletivo da UOL
 
 Autor: Mateus Brito
 
